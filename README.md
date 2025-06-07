@@ -10,7 +10,7 @@ Easily locate and visualize Roblox game servers across the globe by Place ID.
 ### Steps
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Rhgx/roblox-reigon-scanner
+   git clone https://github.com/Rhgx/roblox-reigon-scanner.git
    ```
 2. Navigate to the project folder:
    ```bash
