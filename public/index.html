@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Server Locator</title>
+
+    <!-- Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="app-header">
+            <div class="logo-title">
+                <h1 id="appTitleLink" title="Back to Search">Roblox Server <span class="highlight">Locator</span></h1>
+            </div>
+        </header>
+
+        <main class="app-main-content">
+            <!-- Initial Search View -->
+            <div id="initialView" class="view-container initial-view">
+                <div class="search-panel">
+                    <input type="text" id="placeIdInput" placeholder="Enter Roblox Place ID">
+                    <button id="findServersBtn">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                        Find Servers
+                    </button>
+                </div>
+                <p id="initialStatusMessage" class="status-message">Enter a Place ID to begin.</p>
+            </div>
+
+            <!-- Globe & Details View -->
+            <div id="mainView" class="view-container main-view">
+                <div class="map-area">
+                    <div id="globeViz"></div>
+                </div>
+                <aside class="sidebar-area">
+                    <div id="gameInfoPanel" class="sidebar-panel game-info">
+                    </div>
+                    <div id="serverListPanel" class="sidebar-panel server-list">
+                        <h2 id="serverListTitle">Server Details</h2>
+                        <div id="serverListContent" class="server-list-items">
+                            <p class="list-placeholder">Click a server on the globe.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <!-- Fullscreen Loader -->
+        <div id="loaderOverlay" class="loader-overlay">
+            <div class="loader-spinner"></div>
+            <p id="loaderMessage">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <!-- 3D Globe Libraries -->
+    <script src="//unpkg.com/three"></script>
+    <script src="//unpkg.com/globe.gl"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
