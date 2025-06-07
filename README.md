@@ -4,7 +4,7 @@ Easily locate and visualize Roblox game servers across the globe by Place ID.
 
 ## How to Run 🛠️
 
-### Prerequisites
+### Requirements
 - Install [Node.js](https://nodejs.org/) (v14 or newer).
 
 ### Steps
