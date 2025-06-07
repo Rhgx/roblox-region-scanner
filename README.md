@@ -1,4 +1,4 @@
-# Roblox Reigon Scanner 🌍
+# Roblox Region Scanner 🌍
 
 Easily locate and visualize Roblox game servers across the globe by Place ID.
 
