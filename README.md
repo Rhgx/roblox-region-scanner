@@ -46,7 +46,6 @@ public/
   assets/
 server.js
 config.json
-run.bat
 ```
 
 ## License 📝
