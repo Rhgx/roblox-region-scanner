@@ -47,6 +47,3 @@ public/
 server.js
 config.json
 ```
-
-## License 📝
-MIT License. Feel free to use and modify this project.
