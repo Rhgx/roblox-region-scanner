@@ -186,8 +186,7 @@ async function getServerGeoLocation(server, placeId, robloxCookie, userGeo) {
   const maxPlayers = server.maxPlayers;
 
   try {
-    // console.log(chalk.gray(`  → Geolocating server ${serverId} (${playerCount}/${maxPlayers} players)`)); // Too verbose for console.log during SSE
-    console.log(chalk.gray(`  → Geolocating server ${serverId}`)); // Re-enabled server location logging
+  console.log(chalk.gray(`  → Geolocating server ${serverId} (${playerCount}/${maxPlayers} players)`)); // Too verbose for console.log during SSE
 
     const authHeaders = {
       "Referer": `https://www.roblox.com/games/${placeId}/`,
