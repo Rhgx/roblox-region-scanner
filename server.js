@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3532; // Change the port here if you want to
+const PORT = 3000; // Change the port here if you want to
 
 // --- Configuration ---
 let ROBLOX_COOKIE;
