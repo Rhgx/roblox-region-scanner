@@ -186,7 +186,7 @@ async function getServerGeoLocation(server, placeId, robloxCookie, userGeo) {
   const maxPlayers = server.maxPlayers;
 
   try {
-  console.log(chalk.gray(`  → Geolocating server ${serverId} (${playerCount}/${maxPlayers} players)`)); // Too verbose for console.log during SSE
+  console.log(chalk.gray(`  → Geolocating server ${serverId} (${playerCount}/${maxPlayers} players)`));
 
     const authHeaders = {
       "Referer": `https://www.roblox.com/games/${placeId}/`,
@@ -215,7 +215,7 @@ async function getServerGeoLocation(server, placeId, robloxCookie, userGeo) {
       const estimatedPing = calculatePing(userGeo, serverCoords, playerCount, maxPlayers);
 
       const location = `${geoResponse.data.city}, ${geoResponse.data.country}`;
-      console.log(chalk.green(`  ✓ Located ${serverId}: ${chalk.bold(location)} | Ping: ~${estimatedPing}ms`)); // Re-enabled detailed location logging
+      console.log(chalk.green(`  ✓ Located ${serverId}: ${chalk.bold(location)} | Ping: ~${estimatedPing}ms`));
       
       return {
         id: serverId,
