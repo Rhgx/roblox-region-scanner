@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "roblox-region-scanner",
+  "name": "roblox-reigon-scanner",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
