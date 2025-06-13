@@ -291,3 +291,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Ad Banner Toggle Function
+window.toggleAdBanner = function() {
+  const adContainer = document.querySelector('.ad-container');
+  const closeBtn = document.querySelector('.ad-close-btn');
+  
+  if (adContainer.classList.contains('minimized')) {
+    adContainer.classList.remove('minimized');
+    closeBtn.innerHTML = '&times;';
+    closeBtn.title = 'Minimize Ad';
+  } else {
+    adContainer.classList.add('minimized');
+    closeBtn.innerHTML = '+';
+    closeBtn.title = 'Restore Ad';
+  }
+};

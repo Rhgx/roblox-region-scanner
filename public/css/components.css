@@ -70,6 +70,59 @@
 
 #placeIdInput { margin-bottom: 1rem; }
 
+/* --- Enhanced Place ID Input --- */
+.place-id-input-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.place-id-input {
+    padding-left: 2.5rem !important;
+    font-size: 1rem !important;
+    font-weight: 500;
+    background-color: var(--bg-input);
+    border: 2px solid var(--border-primary);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.place-id-input:hover {
+    border-color: var(--accent-secondary);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.place-id-input:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2);
+    background-color: var(--bg-secondary);
+}
+
+.place-id-input::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+.place-id-input:focus ~ .input-icon,
+.place-id-input-wrapper:focus-within .input-icon {
+    color: var(--accent-primary);
+}
+
+.place-id-input:hover ~ .input-icon,
+.place-id-input-wrapper:hover .input-icon {
+    color: var(--accent-secondary);
+}
+
 /* --- Status Message --- */
 .status-message { font-size: 0.875rem; color: var(--text-secondary); text-align: center; }
 .status-message.small { margin-top: 0.75rem; font-size: 0.825rem; }

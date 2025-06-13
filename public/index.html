@@ -52,15 +52,21 @@
                 <span id="gamePreviewVisits">0</span>
               </p>
             </div>
-          </div>
-
-          <div class="search-panel">
-            <input
-              type="text"
-              id="placeIdInput"
-              placeholder="Enter Roblox Place ID"
-            />
-            <button id="findServersBtn">
+          </div>          <div class="search-panel">
+            <div class="place-id-input-wrapper">
+              <div class="input-icon">
+                <span class="material-symbols-outlined">tag</span>
+              </div>
+              <input
+                type="text"
+                id="placeIdInput"
+                class="form-input place-id-input"
+                placeholder="Enter Roblox Place ID (e.g., 920587237)"
+                pattern="[0-9]*"
+                inputmode="numeric"
+              />
+            </div>
+            <button id="findServersBtn" class="btn btn-primary btn-block">
               <span class="material-symbols-outlined icon">search</span>
               Find Servers
             </button>
@@ -131,18 +137,11 @@
         <!-- Globe & Details View -->
         <div id="mainView" class="view-container main-view">
           <div class="map-area">
-            <div id="globeViz"></div>
-            <div
-              style="
-                position: absolute;
-                font-size: larger;
-                color: white;
-                z-index: 1000;
-                top: 10px;
-                left: 10px;
-              "
-            >
-              TEST
+            <div id="globeViz"></div>            <!-- Advertisement Banner -->
+            <div class="ad-container">
+              <button class="ad-close-btn" onclick="toggleAdBanner()" title="Minimize/Restore Ad">×</button>
+              <div class="ad-placeholder-content">Your Ad Here</div>
+              <div class="ad-description">300 x 250 Banner Space</div>
             </div>
           </div>
           <aside class="sidebar-area">
