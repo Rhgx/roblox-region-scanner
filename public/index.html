@@ -21,7 +21,7 @@
     />
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="app-wrapper">
@@ -132,6 +132,18 @@
         <div id="mainView" class="view-container main-view">
           <div class="map-area">
             <div id="globeViz"></div>
+            <div
+              style="
+                position: absolute;
+                font-size: larger;
+                color: white;
+                z-index: 1000;
+                top: 10px;
+                left: 10px;
+              "
+            >
+              TEST
+            </div>
           </div>
           <aside class="sidebar-area">
             <div id="gameInfoPanel" class="sidebar-panel game-info">
@@ -254,7 +266,7 @@
     <!-- 3D Globe Libraries -->
     <script src="//unpkg.com/three"></script>
     <script src="//unpkg.com/globe.gl"></script>
-    <!-- Custom Script -->
-    <script src="script.js"></script>
+    <!-- Custom Script - Correct path and type="module" -->
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

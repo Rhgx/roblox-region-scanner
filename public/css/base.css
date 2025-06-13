@@ -1,0 +1,68 @@
+/* 📁 public/css/base.css */
+
+/* --- Root Variables --- */
+:root {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #010409;
+    --bg-input: #0d1117;
+
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --text-highlight: #e6edf3;
+    --text-on-accent: #ffffff;
+
+    --border-primary: #30363d;
+    --border-secondary: #21262d;
+
+    --accent-primary: #58a6ff;
+    --accent-secondary: #2f81f7;
+    --accent-success: #238636;
+    --accent-error: #f85149;
+
+    --shadow-soft: rgba(1, 4, 9, 0.08);
+    --shadow-medium: rgba(1, 4, 9, 0.12);
+
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --border-radius: 6px;
+    --transition-speed: 0.25s;
+    --transition-easing: ease-in-out;
+}
+
+/* --- Global Resets & Body --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Accessibility & Icons --- */
+:focus-visible {
+    outline: none;
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.4) !important;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    font-size: 1.2em;
+    line-height: 1;
+}

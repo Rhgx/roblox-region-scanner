@@ -1,0 +1,60 @@
+/* 📁 public/css/ad-box.css */
+
+.ad-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    width: 300px;
+    height: 250px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: rgba(10, 10, 15, 0.8);
+    border: 1px solid var(--border-primary, #30363d);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-secondary, #8b949e);
+    font-family: 'Inter', sans-serif;
+    animation: fadeInAd 0.5s 0.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .ad-container::before {
+    content: 'Advertisement';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-secondary, #161b22);
+    color: var(--text-muted, #586069);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .ad-placeholder-content {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-highlight, #58a6ff);
+  }
+  
+  @keyframes fadeInAd {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

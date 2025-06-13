@@ -1,25 +1,46 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "roblox-reigon-scanner",
+  "name": "roblox-region-scanner",
   "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "description": "An Express.js server that finds and geolocates Roblox game servers to estimate ping and find the best region to play in.",
+  "author": "Your Name <your.email@example.com> (https://your-website.com)",
+  "license": "MIT",
+  "private": true,
   "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "axios": "^1.9.0",
-    "boxen": "^8.0.1",
-    "chalk": "^5.4.1",
+    "axios": "^1.7.2",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "geoip-lite": "^1.4.10",
-    "roblox-reigon-scanner": "file:"
-  }
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "geoip-lite": "^1.4.10"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "roblox",
+    "api",
+    "express",
+    "geolocation",
+    "server-scanner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Battlelamb/roblox-region-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Battlelamb/roblox-region-scanner/issues"
+  },
+  "homepage": "https://github.com/Battlelamb/roblox-region-scanner#readme"
 }
