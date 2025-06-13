@@ -20,7 +20,17 @@ Easily locate and visualize Roblox game servers across the globe by Place ID.
    ```bash
    npm install
    ```
-4. Add your Roblox Cookie to `config.json`:
+4. Add your Roblox Cookie to `.env` file (recommended) or `config.json`:
+   
+   Option A: Using .env file (recommended)
+   - Create a `.env` file in the project directory (or edit if it exists).
+   - Add your Roblox Cookie:
+     ```
+     ROBLOX_COOKIE=YOUR_ROBLOX_COOKIE_HERE
+     ```
+   - Save the file.
+   
+   Option B: Using config.json (legacy)
    - Open the `config.json` file located in the project directory.
    - Add your Roblox Cookie under the `robloxCookie` field:
      ```json

@@ -7,6 +7,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import geoip from 'geoip-lite';
 import boxen from 'boxen';
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,23 +21,30 @@ const PORT = 3000; // Change the port here if you want to
 // --- Configuration ---
 let ROBLOX_COOKIE;
 try {
-  const configPath = path.join(__dirname, 'config.json');
-  const configFile = await fs.readFile(configPath, 'utf8');
-  const CONFIG = JSON.parse(configFile);
+  // Try to get ROBLOX_COOKIE from .env first
+  if (process.env.ROBLOX_COOKIE) {
+    ROBLOX_COOKIE = process.env.ROBLOX_COOKIE;
+    console.log(chalk.green.bold('✓ Config loaded successfully from .env file'));
+  } else {
+    // Fall back to config.json if .env doesn't have the cookie
+    const configPath = path.join(__dirname, 'config.json');
+    const configFile = await fs.readFile(configPath, 'utf8');
+    const CONFIG = JSON.parse(configFile);
 
-  if (!CONFIG.robloxCookie) {
-    throw new Error("'robloxCookie' is missing in config.json");
+    if (!CONFIG.robloxCookie) {
+      throw new Error("'robloxCookie' is missing in config.json and ROBLOX_COOKIE is not set in .env");
+    }
+
+    ROBLOX_COOKIE = CONFIG.robloxCookie;
+    console.log(chalk.green.bold('✓ Config loaded successfully from config.json'));
   }
-
-  ROBLOX_COOKIE = CONFIG.robloxCookie;
-  console.log(chalk.green.bold('✓ Config loaded successfully'));
 } catch (error) {
   console.error(
     chalk.red.bold('✗ Error loading config:'),
     chalk.yellow(error.message)
   );
   console.log(
-    chalk.yellow('ℹ Please ensure config.json exists at the project root with your .ROBLOSECURITY cookie')
+    chalk.yellow('ℹ Please ensure .env file exists with your ROBLOX_COOKIE or config.json exists at the project root with your .ROBLOSECURITY cookie')
   );
   process.exit(1);
 }
